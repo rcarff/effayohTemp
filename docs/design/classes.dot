@@ -1,0 +1,12 @@
+digraph G {
+	node [shape=box]; // Set the default shape of a node to a box.
+	MarchandModel -> MarchandModelCommodity;
+	MarchandModelCommodity -> FoodBalanceSheetItem;
+	MarchandModelCommodity -> AggregateTradeMatrixItem;
+	AggregateTradeMatrixItem -> TradeMatrixItem;
+	DetailedTradeMatrix [shape=ellipse];
+	TradeMatrixItem -> DetailedTradeMatrix;
+	FoodBalanceSheet [shape=ellipse];
+	FoodBalanceSheetItem -> FoodBalanceSheet;
+	MarchandModel -> MarchandModelNetwork;
+}

@@ -1,0 +1,10 @@
+digraph G {
+	"data source defined political entity" -> "effayoh political entity" [label="is mapped to"];
+	"effayoh political entity" -> "whole political entity" [label="is atomic"];
+	"effayoh political entity" -> "component political entity" [label="is a member of a group"];
+	"effayoh political entity" -> "compound political entity" [label="is a group"];
+	"whole political entity" -> "model political entity" [label="is"];
+	"component political entity" -> "model political entity" [label="is accumulated in"];
+	"compound political entity" -> "model political entity" [label="is multiple"];
+	"model political entity" -> "network node" [label="maps to"]
+}
