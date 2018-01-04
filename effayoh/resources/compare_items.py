@@ -69,7 +69,7 @@ def main():
 
     for key in fbs_items:
         if not key in common_keys:
-            print(key, *fbs_items[key])
+            print(key, fbs_items[key])
     else:
         print()
 
@@ -77,7 +77,7 @@ def main():
 
     for key in dtm_items:
         if not key in common_keys:
-            print(key, *dtm_items[key])
+            print(key, dtm_items[key])
 
 
 if __name__ == "__main__":
