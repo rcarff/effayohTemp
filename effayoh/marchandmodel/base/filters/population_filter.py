@@ -119,7 +119,8 @@ class FAOSTATPopulationFilter:
                 if population <= threshold:
                     self.excluded_countries.add(effpent)
 
-        self.excluded_countries.remove(FAOPolitEnt.LUXEMBOURG)
+        if FAOPolitEnt.LUXEMBOURG in self.excluded_countries:
+            self.excluded_countries.remove(FAOPolitEnt.LUXEMBOURG)
 
     def excludes(self, effpent):
         return effpent in self.excluded_countries
